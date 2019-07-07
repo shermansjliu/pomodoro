@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+    <div class="nav-item">
+        <a href="" class="nav-link">Pomodoro</a>
+    </div>
+    <div class="nav-item">
+        <a href="" class="nav-link">App details</a>
+    </div>
+    </div>
+</nav>
+    <div class="main-container">
+        <div class="selection-container">
+            <div></div>
+            <div class="time-select">
+                <div >
+                    <p class="time-title">Work Time</p>
+                </div>
+                <div>
+                    <img class="up-arrow work" src="images/right-arrow.svg" alt="Up">
+                </div>
+                <div class="work-start-number">25</div>
+                <div>
+                    <img class="down-arrow work" src="images/right-arrow.svg" alt="Down">
+                </div>
+            </div>
+            <div class="time-select">
+                <div>
+                    <p class="time-title">Break time</p>
+                </div>
+                <div>
+                    <img class="up-arrow break" src="images/right-arrow.svg" alt="Up">
+                </div>
+                <div class="break-start-number">5</div>
+                <div>
+                        <img class="down-arrow break" src="images/right-arrow.svg" alt="Down">
+                </div>
+            </div>
+            <div></div>
+
+        </div>
+        <span class="line"></span>
+        <div class="control-container">
+            <div  class="control-button"><img id="play" src="images/play-button.svg" alt="Play"></div>
+            <div class="control-button"><img  id="pause" src ="images/pause.svg" alt"Pause"></div>
+            <div class="control-button"><img id="stop"  src ="images/stop.svg" alt"Stop"></div>
+            <div class="control-button"><img  id="reset" src ="images/reset.svg" alt"Reset"></div>
+        </div>
+        <div class ="timer-container">
+            <p class="session-title">Session</p>
+            <p class="timer">25:00</p>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
