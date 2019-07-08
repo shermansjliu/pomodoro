@@ -9,7 +9,6 @@
 
 body{
     background-color: var(--light-bg-color);
-    padding-bottom: 2%;
 
 }
 nav {
@@ -26,27 +25,54 @@ nav {
     align-items: center;
     justify-items: center;
 }
-.nav-item {
-
-}
-
-ul {
-    list-style: none;
-}
 
 .nav-link {
     text-decoration: none;
+    letter-spacing: 2px;
     text-transform: uppercase;
-
-    color: var(--light-bg-color)
+    color: var(--light-bg-color);
+    position: relative;
+    right: 0px;
+    z-index: 3;
+    transition: all 1s ease;
 }
+
+.nav-link:hover {
+    right: 10px;
+    transition: all 1s ease;
+
+}
+
+.nav-link::after {
+    display: inline-block;
+    content: '';
+    left: -10%;
+    top: -10%;
+    height: 130%;
+    width: 120%;
+    background-color: black;
+    position: absolute;
+     z-index: -1;
+    transform: scale(0,1);
+    transition: all 0.4s ease;
+    transform-origin: left;
+}
+
+.nav-link:hover::after{
+    transform: scale(1,1);
+    transition:  all 0.4s ease;
+    transform-origin: left;
+}
+
 .main-container, .selection-container{
     padding-top: 30px;
 }
 .main-container {
     color: var(--dark-bg-color);
 }
-
+.break-start-number, .work-start-number {
+    font-size: 1.8rem
+}
 .time-select {
     height: 200px;
     text-align: center;
@@ -64,6 +90,7 @@ ul {
 .time-title{
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 1.5rem;
 }
 
 .line {
@@ -109,7 +136,8 @@ ul {
     color: black;
 }
 .timer-container, .control-container {
-    margin-top: 30px;
+
+    padding-top: 30px;
     height: 200px;
     color: var(--light-bg-color);
 }
@@ -142,4 +170,21 @@ ul {
 
 .control-button:hover {
     opacity: 0.8;
+}
+
+/* Details page */
+.credit-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.credit-list > div{
+    margin-top: 30px;
+}
+
+.credit-title {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-top: 30px;
+    text-align: center;
 }
